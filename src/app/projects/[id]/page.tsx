@@ -31,7 +31,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
       <nav className="w-full max-w-7xl px-6 py-6 flex justify-between items-center relative z-10">
         <Link href="/" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group">
           <div className="w-8 h-8 rounded-full border border-border bg-secondary/50 flex items-center justify-center group-hover:bg-secondary transition-colors">
-             <ArrowLeft className="size-4" />
+            <ArrowLeft className="size-4" />
           </div>
           <span className="text-sm font-medium">Back to Studio</span>
         </Link>
@@ -42,7 +42,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
 
       <main className="w-full max-w-7xl px-6 py-8 lg:py-16 flex-grow relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
-          
+
           {/* Left Column: Info */}
           <div className="lg:col-span-4 flex flex-col lg:sticky lg:top-20">
             <h1 className="text-5xl lg:text-7xl font-medium tracking-tighter text-foreground mb-4 text-glow">
@@ -63,7 +63,7 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
                   Visit Live Site
                 </a>
               )}
-              
+
               <div className="flex gap-3">
                 {project.githubUrl && (
                   <a
@@ -110,41 +110,41 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
 
           {/* Right Column: Visuals */}
           <div className="lg:col-span-8 relative group">
-             {/* Glow Effect */}
+            {/* Glow Effect */}
             <div className="absolute -inset-10 bg-accent-orange/10 rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-            
+
             {/* Main Card */}
             <div className="glass-panel rounded-3xl overflow-hidden aspect-[16/10] relative bg-card border border-border">
-                {/* Content */}
-                <div className="relative h-full bg-card p-1">
-                    <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
-                         {project.image ? (
-                           <div className="relative w-full h-full">
-                             <img 
-                               src={project.image} 
-                               alt={project.imageAlt || project.title} 
-                               className="w-full h-full object-cover"
-                             />
-                             <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60"></div>
-                           </div>
-                         ) : (
-                           /* Placeholder Structure */
-                           <div className="p-8 grid grid-cols-12 gap-6 w-full h-full opacity-60">
-                               <div className="col-span-3 bg-secondary/50 rounded-xl h-full border border-border"></div>
-                               <div className="col-span-9 flex flex-col gap-6">
-                                  <div className="h-32 bg-accent-orange/5 rounded-xl border border-accent-orange/20 flex items-center justify-center relative overflow-hidden">
-                                      <div className="absolute inset-0 bg-noise opacity-50 dark:opacity-50 opacity-10"></div>
-                                      <span className="text-accent-orange font-mono text-xs tracking-widest">&lt;AnalyticsGraph /&gt;</span>
-                                  </div>
-                                  <div className="grid grid-cols-2 gap-6 h-full">
-                                      <div className="bg-secondary/50 rounded-xl border border-border"></div>
-                                      <div className="bg-secondary/50 rounded-xl border border-border"></div>
-                                  </div>
-                               </div>
-                          </div>
-                         )}
+              {/* Content */}
+              <div className="relative h-full bg-card p-1">
+                <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                  {project.image ? (
+                    <div className="relative w-full h-full">
+                      <img
+                        src={project.image}
+                        alt={project.imageAlt || project.title}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent opacity-60"></div>
                     </div>
+                  ) : (
+                    /* Placeholder Structure */
+                    <div className="p-8 grid grid-cols-12 gap-6 w-full h-full opacity-60">
+                      <div className="col-span-3 bg-secondary/50 rounded-xl h-full border border-border"></div>
+                      <div className="col-span-9 flex flex-col gap-6">
+                        <div className="h-32 bg-accent-orange/5 rounded-xl border border-accent-orange/20 flex items-center justify-center relative overflow-hidden">
+                          <div className="absolute inset-0 bg-noise opacity-50 dark:opacity-50 opacity-10"></div>
+                          <span className="text-accent-orange font-mono text-xs tracking-widest">&lt;AnalyticsGraph /&gt;</span>
+                        </div>
+                        <div className="grid grid-cols-2 gap-6 h-full">
+                          <div className="bg-secondary/50 rounded-xl border border-border"></div>
+                          <div className="bg-secondary/50 rounded-xl border border-border"></div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
+              </div>
             </div>
           </div>
         </div>
@@ -157,11 +157,10 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`whitespace-nowrap py-4 border-b-2 font-medium text-sm transition-all tracking-wide ${
-                    activeTab === tab
+                  className={`whitespace-nowrap py-4 border-b-2 font-medium text-sm transition-all tracking-wide ${activeTab === tab
                       ? "border-accent-orange text-accent-orange"
                       : "border-transparent text-muted-foreground hover:text-foreground hover:border-border"
-                  }`}
+                    }`}
                 >
                   {tab}
                 </button>
@@ -171,36 +170,30 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
 
           <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground font-light leading-relaxed">
             {activeTab === "About" && (
-                <>
-                    <p className="text-xl text-foreground mb-6 font-medium">{project.longDescription}</p>
-                    <p className="opacity-80">{project.mission}</p>
-                    <p className="opacity-80">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </>
+              <>
+                <p className="text-xl text-foreground mb-6 font-medium">{project.longDescription}</p>
+                <p className="opacity-80">{project.mission}</p>
+              </>
             )}
-             {activeTab === "Features" && (
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0">
-                    <li className="bg-secondary/30 p-4 rounded-lg border border-border flex items-center gap-3">
-                        <span className="w-1.5 h-1.5 rounded-full bg-accent-orange"></span> Feature 1: Real-time analytics
-                    </li>
-                    <li className="bg-secondary/30 p-4 rounded-lg border border-border flex items-center gap-3">
-                         <span className="w-1.5 h-1.5 rounded-full bg-accent-orange"></span> Feature 2: Comprehensive dashboards
-                    </li>
-                    <li className="bg-secondary/30 p-4 rounded-lg border border-border flex items-center gap-3">
-                         <span className="w-1.5 h-1.5 rounded-full bg-accent-orange"></span> Feature 3: Secure data handling
-                    </li>
-                </ul>
+            {activeTab === "Features" && (
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 list-none pl-0">
+                {project.features?.map((feature, i) => (
+                  <li key={i} className="bg-secondary/30 p-4 rounded-lg border border-border flex items-center gap-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent-orange"></span> {feature}
+                  </li>
+                ))}
+              </ul>
             )}
-             {activeTab === "Tech Stack" && (
-                <div className="flex flex-wrap gap-3">
-                    <span className="px-3 py-1 bg-secondary rounded-full border border-border text-sm">Next.js & React</span>
-                    <span className="px-3 py-1 bg-secondary rounded-full border border-border text-sm">Tailwind CSS</span>
-                    <span className="px-3 py-1 bg-secondary rounded-full border border-border text-sm">Node.js</span>
-                    <span className="px-3 py-1 bg-secondary rounded-full border border-border text-sm">PostgreSQL</span>
-                </div>
+            {activeTab === "Tech Stack" && (
+              <div className="flex flex-wrap gap-3">
+                {project.techStack?.map((tech, i) => (
+                  <span key={i} className="px-3 py-1 bg-secondary rounded-full border border-border text-sm">
+                    {tech}
+                  </span>
+                ))}
+              </div>
             )}
-            
+
           </div>
 
           <div className="mt-16 pt-8 border-t border-border flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
@@ -213,13 +206,13 @@ export default function ProjectDetails({ params }: ProjectDetailsProps) {
               </p>
             </div>
             {project.githubUrl && (
-                <a
-                  href={project.githubUrl}
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
-                >
-                  <Github className="size-5" />
-                  <span>Open with GitHub</span>
-                </a>
+              <a
+                href={project.githubUrl}
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-secondary hover:bg-secondary/80 text-foreground transition-colors"
+              >
+                <Github className="size-5" />
+                <span>Open with GitHub</span>
+              </a>
             )}
           </div>
         </div>
