@@ -1,0 +1,40 @@
+[
+  {
+    "id": "lakshx",
+    "title": "LakshX",
+    "category": "Project Management",
+    "description": "A multi-tenant Kanban platform with role-based access, real-time collaboration, and powerful analytics.",
+    "longDescription": "LakshX is built for high-velocity teams that need to cut through the noise. It is a multi-tenant Kanban platform that integrates company-wide intelligence via RAG-powered search, automated meeting transcriptions, and an intelligent engineering calendar. \n\nWith features like Dual-View Kanban (Board & Table), Live Analytics, and smart automations, LakshX transforms project management from a chaotic chore into a streamlined, intuitive process.",
+    "mission": "To provide a clutter-free, intelligent project management experience that empowers teams to focus on building, not managing.",
+    "status": "Beta",
+    "tags": ["SaaS", "Productivity", "AI"],
+    "layout": "featured",
+    "image": "/images/lakshx-main.png",
+    "imageAlt": "LakshX Dashboard",
+    "contributors": [
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuAaeEbH-mWJrChnMELGFOKPBqfZnvlOsIaYvPhLdEKMa5rfm_4X4N2v95mz0fj-I5eQ5tT80BgTGTLWdjjiXsGhRSauV6TZ_zEn2Iw-wKqsN7JSIenoDsBer_m0ZBlsTicVWrtrhFyl8Z5hFRcvYdH7FpTlLXJosIpv-ElPObx8DhgqGafuEX4m_kT0hm3Eow85qpn65CnLHV11Hrq76Xm7hYu85hkfqVjAr4dYyZy-WrgnUQS3ld0IkPB5nI23KLs6x27XmU2Pqag",
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA1B9ya4f6Levzx-GwT-M7t8i6xZUqaPn3-82_RA4TYipl4WuE2DR_Ggc6AuSdsFYlnQTAyNHogl04gC4f5R_FG5GsuQTcyTglcZWi_6BBFDMKTy0a7A5q7Q5gA2mbVgDEvegvuTa7KjWE_aqJvWPLfZObOLe_0cyc1m4XY7uZBPhM6oWiQIb5CMuRAPovJ7OBq4Q6mBJ60jzqDt84IVuQyUKesYm4H5ZIkD7BduI2iY6YAQsrt7yrigFRLLAwLCr-f5TUJ-AqBEgI"
+    ],
+    "developmentPeriod": "2025 - Present",
+    "liveUrl": "https://lakshx.in",
+    "docsUrl": null
+  },
+  {
+    "id": "anvesh",
+    "title": "Anvesh",
+    "category": "Automation Intelligence",
+    "description": "An automated intelligence engine that hunts for high-value businesses with zero online presence.",
+    "longDescription": "Anvesh is an automated intelligence engine designed to identify opportunities where businesses lack digital footprints. By hunting for high-value businesses with zero online presence, it enables targeted outreach and growth strategies.\n\nBuilt to empower freelancers and small agencies worldwide, Anvesh acts as a force multiplier, providing professional-grade tools to discover untapped markets without the high costs typically associated with enterprise intelligence platforms.",
+    "mission": "To democratize access to market intelligence and empower small agencies to compete with industry giants.",
+    "status": "Beta",
+    "tags": ["Automation", "Open Source", "Intelligence"],
+    "layout": "standard",
+    "image": "/images/anvesh-main.png",
+    "imageAlt": "Anvesh Automation Engine",
+    "contributors": [],
+    "developmentPeriod": "2026 - Present",
+    "liveUrl": "",
+    "docsUrl": "https://github.com/401labs/Anvesh",
+    "githubUrl": "https://github.com/401labs/Anvesh"
+  }
+]

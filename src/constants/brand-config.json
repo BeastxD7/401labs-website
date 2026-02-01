@@ -1,0 +1,16 @@
+{
+  "name": "401Labs",
+  "logo": {
+    "src": "/images/logo.png",
+    "alt": "401Labs Logo",
+    "width": 100,
+    "height": 100
+  },
+  "contact": {
+    "email": "hello@401labs.io",
+    "socials": {
+      "twitter": "https://twitter.com/401labs",
+      "github": "https://github.com/401labs"
+    }
+  }
+}

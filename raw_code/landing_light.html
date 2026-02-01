@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>401Labs | Venture Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "page-bg": "#FAFAFA",
+                        "charcoal": "#121214", 
+                        "body-text": "#52525B",
+                        "glass": "rgba(255, 255, 255, 0.8)",
+                        "glass-hover": "rgba(255, 255, 255, 0.95)",
+                        "border-subtle": "rgba(0, 0, 0, 0.06)",
+                        "border-hover": "rgba(0, 0, 0, 0.12)",
+                        "accent-orange": "#FF4D00",
+                        "accent-peach": "#FF884D",
+                        "card-bg": "#FFFFFF",
+                    },
+                    fontFamily: {
+                        "sans": ["Inter", "sans-serif"]
+                    },
+                    letterSpacing: {
+                        "tighter": "-0.04em",
+                        "tight": "-0.02em",
+                    },
+                    backgroundImage: {
+                        'noise': "url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0MDAnIGhlaWdodD0nNDAwJz48ZmlsdGVyIGlkPSdub2lzZUZpbHRlcic+PGZlVHVyYnVsZW5jZSB0eXBlPSdmcmFjdGFsTm9pc2UnIGJhc2VGcmVxdWVuY3k9JzAuNjUnIG51bW9jdGF2ZXM9JzMnIHN0aXRjaFRpbGVzPSdzdGl0Y2gnLz48L2ZpbHRlcj48cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjbm9pc2VGaWx0ZXIpJyBvcGFjaXR5PScwLjA1Jy8+PC9zdmc+')",
+                        'glow-gradient': 'radial-gradient(circle at center, rgba(255, 77, 0, 0.08) 0%, rgba(255,255,255,0) 70%)',
+                        'card-gradient': 'linear-gradient(to bottom right, rgba(255,255,255,1), rgba(250,250,250,0.5))'
+                    },
+                    boxShadow: {
+                        'glow': '0 0 30px -5px rgba(255, 77, 0, 0.3)',
+                        'soft': '0 10px 40px -10px rgba(0, 0, 0, 0.05)',
+                        'card': '0 2px 10px rgba(0,0,0,0.03)',
+                        'inner-light': 'inset 0 1px 0 0 rgba(255, 255, 255, 1)',
+                    }
+                },
+            },
+        }
+    </script>
+<style type="text/tailwindcss">
+        @layer utilities {
+            .glass-panel {
+                @apply bg-glass backdrop-blur-md border border-border-subtle shadow-card;
+            }
+        }
+        body {
+            background-color: #FAFAFA;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-page-bg text-body-text font-sans antialiased selection:bg-accent-orange selection:text-white relative">
+<div class="fixed inset-0 bg-noise opacity-[0.03] pointer-events-none z-0 mix-blend-multiply"></div>
+<div class="fixed top-[-20%] right-[-10%] w-[800px] h-[800px] bg-accent-peach/20 rounded-full blur-[120px] pointer-events-none z-0"></div>
+<div class="fixed bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-accent-orange/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+<div class="fixed top-6 left-0 right-0 z-50 flex justify-center pointer-events-none">
+<header class="glass-panel rounded-full px-6 py-3 flex items-center gap-8 pointer-events-auto transition-all hover:bg-glass-hover hover:border-border-hover hover:shadow-soft">
+<div class="flex items-center gap-2 pr-4 border-r border-black/5">
+<div class="w-6 h-6 bg-charcoal rounded-full flex items-center justify-center">
+<svg class="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"></path>
+</svg>
+</div>
+<span class="text-charcoal font-semibold text-sm tracking-tight">401Labs</span>
+</div>
+<nav class="hidden md:flex items-center gap-6">
+<a class="text-xs font-medium text-slate-500 hover:text-accent-orange transition-colors uppercase tracking-wider" href="#projects">Projects</a>
+<a class="text-xs font-medium text-slate-500 hover:text-accent-orange transition-colors uppercase tracking-wider" href="#philosophy">Philosophy</a>
+</nav>
+<div class="pl-4 border-l border-black/5">
+<a class="text-xs font-medium text-charcoal hover:text-accent-orange transition-colors uppercase tracking-wider flex items-center gap-2" href="#acquire">
+                Acquire
+                <span class="material-symbols-outlined text-[16px]">arrow_outward</span>
+</a>
+</div>
+</header>
+</div>
+<main class="relative z-10 pt-40 pb-24 px-6">
+<section class="max-w-5xl mx-auto mb-32 text-center relative">
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-accent-orange/5 rounded-full blur-[80px] -z-10 pointer-events-none"></div>
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-orange-200 bg-orange-50 backdrop-blur-sm mb-8">
+<span class="relative flex h-1.5 w-1.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-orange opacity-75"></span>
+<span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-accent-orange"></span>
+</span>
+<span class="text-[10px] uppercase tracking-[0.2em] text-accent-orange font-bold">Venture Studio</span>
+</div>
+<h1 class="text-5xl md:text-7xl lg:text-8xl font-medium tracking-tighter text-charcoal mb-8 leading-[0.9]">
+            Building the future,<br/>
+<span class="text-black/20 font-light">one weekend at a time.</span>
+</h1>
+<p class="text-lg md:text-xl text-slate-500 font-light max-w-2xl mx-auto leading-relaxed mb-12">
+            We are an ad-hoc product factory. From rapid concept to acquisition-ready assets, focusing on minimal overhead and maximum impact.
+        </p>
+<div class="flex items-center justify-center gap-6">
+<a class="group relative px-8 py-3 bg-accent-orange text-white rounded-full font-medium text-sm transition-all hover:bg-orange-600 shadow-glow" href="#projects">
+                Explore Projects
+            </a>
+<a class="px-8 py-3 text-slate-500 hover:text-charcoal text-sm font-medium transition-colors border-b border-transparent hover:border-black/10" href="#philosophy">
+                Our Philosophy
+            </a>
+</div>
+</section>
+<section class="max-w-7xl mx-auto mb-32" id="projects">
+<div class="flex items-baseline justify-between mb-12 border-b border-black/5 pb-4">
+<h2 class="text-2xl font-light text-charcoal tracking-tight">Active Labs</h2>
+<span class="text-xs text-slate-400 font-mono">INDEX_01 // PROJECTS</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="lg:col-span-2 group relative rounded-3xl overflow-hidden bg-white border border-border-subtle hover:border-border-hover shadow-card hover:shadow-soft transition-all duration-500">
+<div class="p-8 h-full flex flex-col justify-between relative z-10">
+<div class="flex justify-between items-start mb-8">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-orange shadow-[0_0_8px_rgba(255,77,0,0.5)]"></span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Live</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-accent-orange transition-colors">arrow_outward</span>
+</div>
+<div class="flex flex-col md:flex-row gap-8 items-end">
+<div class="w-full md:w-1/2">
+<h3 class="text-3xl font-medium text-charcoal mb-2 tracking-tight">DataStream AI</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">High-frequency trading engine processing millions of data points with sub-millisecond latency.</p>
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded border border-black/5 bg-gray-50 text-[10px] text-slate-500 uppercase tracking-wider">Fintech</span>
+<span class="px-2 py-1 rounded border border-black/5 bg-gray-50 text-[10px] text-slate-500 uppercase tracking-wider">AI</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 aspect-video rounded-xl overflow-hidden border border-black/5 bg-gray-100">
+<img alt="Data Interface" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWb9f_Q8n6yQWxtIo4YvsGCiVsuSeRF6XAAjWU_1qWdSU_j90DVfU5JEezgqLsFmyxNUR38AOuTOZMjr_KyZ7MjAZoDXN_vPyeGbg8DoFvn4aYaR2yNMUelH_qZ9INZTXCn5427p75gCIkXlhJZoaEZvx9RWxE2LC7HRmGqdznnL5s6ZKQhJmPNp9XMOlG-vdWXvn_oj9DAC5bXILwjQvwVi_tF9Q34RauqPYJ7vwLRvDUTRSgaO_4tyCE4nWpGLk6uSEhhLqG8Qo"/>
+</div>
+</div>
+</div>
+</div>
+<div class="group relative rounded-3xl overflow-hidden bg-white border border-border-subtle hover:border-border-hover shadow-card hover:shadow-soft transition-all duration-500 flex flex-col">
+<div class="h-48 relative overflow-hidden border-b border-black/5">
+<img alt="Logistics" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByeeqCUrBV0RwRJU26frYT4FK9Aq1XVAO4VygCpRQ9x7j6xaH8xYwSzcZSktP9x3P5m9qUpgwUnZpRO75TbO5c7Q4ACWhSD26Ia_aypggWaZ1KsQJMYCvXOh7e_3T56r2LUt74mJTVISWIHSbX8gksadyocWbRUXRhLdMdJad0pmHmEbM5qkuGN7DzmVj2-zu0pCIGX4V089lLC8lq59D4uySAIGldinV6XJJMLtKfLEFCt9-djWE1bELaEDuOFPhYk305tU0ldBo"/>
+<div class="absolute top-4 left-4">
+<div class="flex items-center gap-2 bg-white/90 backdrop-blur-md px-2 py-1 rounded-full border border-black/5 shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-peach"></span>
+<span class="text-[10px] uppercase tracking-widest text-charcoal">Beta</span>
+</div>
+</div>
+</div>
+<div class="p-6 flex-1 flex flex-col justify-between">
+<div>
+<h3 class="text-xl font-medium text-charcoal mb-2 tracking-tight">LogiFlow</h3>
+<p class="text-slate-500 text-xs leading-relaxed">Autonomous supply chain logistics for mid-sized fleets.</p>
+</div>
+<div class="mt-6 pt-6 border-t border-black/5 flex justify-between items-center">
+<span class="text-[10px] text-slate-400 font-mono">V2.0.1</span>
+<span class="material-symbols-outlined text-sm text-slate-400 group-hover:text-accent-orange transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="group relative rounded-3xl overflow-hidden bg-white border border-border-subtle hover:border-border-hover shadow-card hover:shadow-soft transition-all duration-500">
+<div class="p-6 h-full flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-orange shadow-[0_0_8px_rgba(255,77,0,0.5)]"></span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Acquire</span>
+</div>
+</div>
+<div class="mb-6 relative aspect-[2/1] rounded-lg overflow-hidden border border-black/5">
+<img alt="Dashboard" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKBNys85UuStB5d66B9cGKei-f5iF_XmdihdJ2eNRWr6dRrIst0OSAP3XsLpRfKTppTdC1tyS0huNZgSq5GltFL9gvrNydDI4dgYkhZtd2FNbpXlqxVTPwkU3nlR6k2A4EHTtLDXz0-CS0_0cTsbMkq21qAyHeQrzKUi2U4CrTpDmRfGSk-BpnH5oxoPRb6RXTB_eApRpbAJOMHSgjEE40Xr9d2eZeQcjWJSupwNdn4JwFbKWb4NSRSHGqqFrusbwJEEWqvZteefQ"/>
+</div>
+<h3 class="text-xl font-medium text-charcoal mb-1 tracking-tight">Pulse Metrics</h3>
+<p class="text-slate-500 text-xs leading-relaxed mb-4">Unified SaaS performance dashboard.</p>
+<div class="mt-auto">
+<a class="inline-flex items-center text-xs text-accent-orange border-b border-orange-200 pb-0.5 hover:border-orange-500 transition-colors" href="#">
+                            View Deal Terms
+                        </a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2 group relative rounded-3xl overflow-hidden bg-white border border-border-subtle hover:border-border-hover shadow-card hover:shadow-soft transition-all duration-500">
+<div class="p-8 h-full flex flex-row items-center gap-8 relative z-10">
+<div class="w-1/2 hidden md:block aspect-square rounded-xl overflow-hidden border border-black/5 bg-gray-100">
+<img alt="Security" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSElryT5UoJl2jio_4RuXcCvW6YES9nLW5q-qHEY5552e35Yeko1EbfcNQuzRNOL2jhFgci1EAuc9hZ3iP7iLQcg3KJ-BNnjZpJYD-TLQPqfhkKzyPrKDP8aG1e4zG-67pZkOGGHxGmzhsCM8emshTOkrgWdBlB3I0Ehm-0astD5e9p6lxYynWBOts50jxn29g6SCiAWpQUWcHaawRJem6XZBJGQPo3yf86iRCKV04hZv-QUcm-c3LBCbmn-gWWjLMNF_PsKOLvZA"/>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-2 mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-accent-orange shadow-[0_0_8px_rgba(255,77,0,0.5)]"></span>
+<span class="text-[10px] uppercase tracking-widest text-slate-500">Live</span>
+</div>
+<h3 class="text-2xl font-medium text-charcoal mb-3 tracking-tight">Echo CRM</h3>
+<p class="text-slate-500 text-sm leading-relaxed mb-6">Privacy-first customer relations management with end-to-end encryption by default.</p>
+<div class="flex items-center justify-between">
+<div class="flex gap-2">
+<span class="px-2 py-1 rounded border border-black/5 bg-gray-50 text-[10px] text-slate-500 uppercase tracking-wider">Privacy</span>
+<span class="px-2 py-1 rounded border border-black/5 bg-gray-50 text-[10px] text-slate-500 uppercase tracking-wider">Security</span>
+</div>
+<span class="material-symbols-outlined text-slate-400 group-hover:text-accent-orange transition-colors">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto mb-32" id="philosophy">
+<div class="flex items-baseline justify-between mb-12 border-b border-black/5 pb-4">
+<h2 class="text-2xl font-light text-charcoal tracking-tight">The Method</h2>
+<span class="text-xs text-slate-400 font-mono">INDEX_02 // PHILOSOPHY</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-px bg-slate-200 rounded-3xl overflow-hidden border border-slate-200 shadow-card">
+<div class="bg-white p-10 hover:bg-orange-50/30 transition-colors group">
+<div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mb-6 text-accent-orange group-hover:scale-110 transition-transform duration-300 border border-orange-100">
+<span class="material-symbols-outlined text-xl">bolt</span>
+</div>
+<h3 class="text-lg font-medium text-charcoal mb-3">Rapid Prototyping</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Napkin sketch to production MVP in days. We bypass the bureaucracy of traditional development cycles.
+                </p>
+</div>
+<div class="bg-white p-10 hover:bg-orange-50/30 transition-colors group">
+<div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mb-6 text-accent-orange group-hover:scale-110 transition-transform duration-300 border border-orange-100">
+<span class="material-symbols-outlined text-xl">layers</span>
+</div>
+<h3 class="text-lg font-medium text-charcoal mb-3">Modular Architecture</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Built with production-grade code from day one. Scalable, clean, and ready for any infrastructure.
+                </p>
+</div>
+<div class="bg-white p-10 hover:bg-orange-50/30 transition-colors group">
+<div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mb-6 text-accent-orange group-hover:scale-110 transition-transform duration-300 border border-orange-100">
+<span class="material-symbols-outlined text-xl">rocket_launch</span>
+</div>
+<h3 class="text-lg font-medium text-charcoal mb-3">Built to Exit</h3>
+<p class="text-slate-500 text-sm leading-relaxed">
+                    Engineered for acquisition. We ensure seamless handovers with comprehensive documentation.
+                </p>
+</div>
+</div>
+</section>
+<section class="max-w-4xl mx-auto text-center py-20 relative overflow-hidden rounded-3xl" id="acquire">
+<div class="absolute inset-0 bg-white shadow-soft"></div>
+<div class="absolute inset-0 bg-glow-gradient opacity-60 pointer-events-none"></div>
+<div class="relative z-10">
+<h2 class="text-4xl md:text-5xl font-medium text-charcoal tracking-tighter mb-6">
+                Ready to take ownership?
+            </h2>
+<p class="text-slate-500 text-lg mb-10 max-w-xl mx-auto">
+                Acquire an existing Lab Project or commission a rapid-build solution for your specific needs.
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-charcoal text-white font-semibold rounded-lg hover:bg-black transition-colors shadow-lg">
+                    Browse Assets
+                </button>
+<button class="w-full sm:w-auto px-8 py-4 bg-transparent border border-slate-200 text-charcoal font-medium rounded-lg hover:bg-slate-50 hover:border-slate-300 transition-colors">
+                    Contact Studio
+                </button>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-slate-200 bg-white py-12 relative z-10">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="w-5 h-5 bg-charcoal rounded-full flex items-center justify-center">
+<svg class="w-2.5 h-2.5 text-white" fill="currentColor" viewBox="0 0 24 24">
+<path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z"></path>
+</svg>
+</div>
+<span class="text-charcoal font-medium text-sm tracking-tight">401Labs</span>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-400 hover:text-accent-orange transition-colors text-xs uppercase tracking-widest" href="#">Twitter</a>
+<a class="text-slate-400 hover:text-accent-orange transition-colors text-xs uppercase tracking-widest" href="#">LinkedIn</a>
+<a class="text-slate-400 hover:text-accent-orange transition-colors text-xs uppercase tracking-widest" href="#">GitHub</a>
+</div>
+<div class="text-slate-400 text-xs font-mono">
+            © 2024 401Labs.
+        </div>
+</div>
+</footer>
+
+</body></html>

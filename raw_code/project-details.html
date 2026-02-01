@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anvesh Project Detail View</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6B35", // 401Labs Orange
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E293B",
+                        "text-light": "#334155",
+                        "text-dark": "#E2E8F0",
+                    },
+                    fontFamily: {
+                        display: ["Inter", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .orange-glow {
+            background: radial-gradient(circle, rgba(255,107,53,0.15) 0%, rgba(255,107,53,0) 70%);
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark transition-colors duration-300 min-h-screen flex flex-col items-center">
+<nav class="w-full max-w-7xl px-6 py-4 flex justify-between items-center border-b border-gray-200 dark:border-gray-800">
+<div class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+            401<span class="text-primary">Labs</span>
+</div>
+<div class="flex gap-4">
+<button class="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors" id="theme-toggle">
+<i class="fas fa-moon dark:hidden"></i>
+<i class="fas fa-sun hidden dark:block text-yellow-400"></i>
+</button>
+</div>
+</nav>
+<main class="w-full max-w-7xl px-6 py-12 lg:py-20 flex-grow relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-start">
+<div class="lg:col-span-4 flex flex-col lg:sticky lg:top-10">
+<h1 class="text-5xl lg:text-7xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                    Anvesh
+                </h1>
+<p class="text-lg text-gray-500 dark:text-gray-400 font-light mb-8">
+                    Marketing Tool
+                </p>
+<a class="inline-flex items-center justify-center gap-3 px-6 py-3.5 bg-primary hover:bg-orange-600 text-white font-medium rounded-lg transition-all duration-200 shadow-lg shadow-orange-500/20 w-fit" href="#">
+<i class="fab fa-github text-xl"></i>
+                    Open with GitHub
+                </a>
+<div class="hidden lg:block mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+<div class="flex flex-col gap-2 text-sm text-gray-500 dark:text-gray-400">
+<span class="font-semibold text-gray-900 dark:text-gray-200">Contributors</span>
+<div class="flex -space-x-2">
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaeEbH-mWJrChnMELGFOKPBqfZnvlOsIaYvPhLdEKMa5rfm_4X4N2v95mz0fj-I5eQ5tT80BgTGTLWdjjiXsGhRSauV6TZ_zEn2Iw-wKqsN7JSIenoDsBer_m0ZBlsTicVWrtrhFyl8Z5hFRcvYdH7FpTlLXJosIpv-ElPObx8DhgqGafuEX4m_kT0hm3Eow85qpn65CnLHV11Hrq76Xm7hYu85hkfqVjAr4dYyZy-WrgnUQS3ld0IkPB5nI23KLs6x27XmU2Pqag"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1B9ya4f6Levzx-GwT-M7t8i6xZUqaPn3-82_RA4TYipl4WuE2DR_Ggc6AuSdsFYlnQTAyNHogl04gC4f5R_FG5GsuQTcyTglcZWi_6BBFDMKTy0a7A5q7Q5gA2mbVgDEvegvuTa7KjWE_aqJvWPLfZObOLe_0cyc1m4XY7uZBPhM6oWiQIb5CMuRAPovJ7OBq4Q6mBJ60jzqDt84IVuQyUKesYm4H5ZIkD7BduI2iY6YAQsrt7yrigFRLLAwLCr-f5TUJ-AqBEgI"/>
+<img alt="User" class="w-8 h-8 rounded-full border-2 border-background-light dark:border-background-dark" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjVI2YPITmbI_xtatuK9H0O7cDnm9Y4nQHTE3bsmawH6Dm_haPXQt8is6DVaorqMXDQt6X6_n0TPmxG1D6qt29x6SQqZIBkBtnEatuzGTnWKIyBGk7tyR9zXA78zxezbFUlejD0rJYJu1WAKKbdGdBFeG713CEz1KoSPcKqty_PNUpOOgoSiosEhsp3N2Cer5PaXVdKmUabdGBb-OfmQGq-5BA_dwKBVgcBWrDygcj-7TD6Tv_wSKGlE_o_LA7rycKa28j7yNEk8k"/>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 relative group">
+<div class="absolute -inset-10 bg-primary/20 rounded-full blur-3xl opacity-20 dark:opacity-40 pointer-events-none"></div>
+<div class="relative rounded-2xl overflow-hidden shadow-2xl bg-surface-light dark:bg-surface-dark border border-gray-200 dark:border-gray-700/50 aspect-[16/10]">
+<div class="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex flex-col">
+<div class="h-8 bg-gray-200 dark:bg-gray-900 flex items-center px-4 gap-2 border-b border-gray-300 dark:border-gray-700">
+<div class="w-3 h-3 rounded-full bg-red-400"></div>
+<div class="w-3 h-3 rounded-full bg-yellow-400"></div>
+<div class="w-3 h-3 rounded-full bg-green-400"></div>
+</div>
+<div class="flex-1 p-6 grid grid-cols-12 gap-4">
+<div class="col-span-3 bg-gray-50 dark:bg-gray-700/30 rounded h-full animate-pulse"></div>
+<div class="col-span-9 flex flex-col gap-4">
+<div class="h-32 bg-primary/10 rounded border border-primary/20 flex items-center justify-center">
+<span class="text-primary font-mono text-sm">&lt;AnalyticsGraph /&gt;</span>
+</div>
+<div class="grid grid-cols-2 gap-4 h-full">
+<div class="bg-gray-50 dark:bg-gray-700/30 rounded h-40"></div>
+<div class="bg-gray-50 dark:bg-gray-700/30 rounded h-40"></div>
+</div>
+</div>
+</div>
+<img alt="Anvesh Dashboard Analytics" class="absolute inset-0 object-cover opacity-80 mix-blend-overlay" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZAy1TiLw7ypo92u8v86wnNjasTsQ_nzFtn9g3uON_qinl8r1nN_3MPKKY9c0D0wA1pEeAjS-B0cqZhONv9tfWSNmpSPDrFNSuROm0GfGsuQicTz1lUt2afr14ID6ACwfH8-RdcW6ucb-sb2lHheevBhpYcUtJltR9hRGPxxaRNeulccIvZDf2LrkI8t_7662QRTeU9E-hwxhVLZG5lJw0l6G5Z81uk3slXnu7jNKMK6QA24EChgR4fpzErZA2H1Nz8woS6PaNhUc"/>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-20 lg:mt-32 max-w-4xl mx-auto">
+<div class="border-b border-gray-200 dark:border-gray-700 mb-8">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<button class="border-primary text-primary whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors">
+                        About
+                    </button>
+<button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-200 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors">
+                        Features
+                    </button>
+<button class="border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-200 whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm transition-colors">
+                        Tech Stack
+                    </button>
+</nav>
+</div>
+<div class="prose prose-lg dark:prose-invert max-w-none text-gray-600 dark:text-gray-300 font-light leading-relaxed">
+<p>
+                    Anvesh is an open-source marketing intelligence tool designed to simplify data aggregation across multiple channels. Born out of the need for a unified dashboard that respects user privacy while providing deep insights, Anvesh leverages modern web technologies to deliver real-time analytics without the bloat of enterprise software.
+                </p>
+<p>
+                    Our mission is to democratize marketing data for indie developers and small teams. By providing a self-hostable solution, Anvesh ensures that your data remains yours, eliminating third-party tracking risks and reducing subscription fatigue.
+                </p>
+<p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                </p>
+</div>
+<div class="mt-16 pt-8 border-t border-gray-200 dark:border-gray-800 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+<div>
+<h4 class="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-1">
+                        App Development Period
+                    </h4>
+<p class="text-gray-600 dark:text-gray-400 font-mono">
+                        Dec 2023 (Ongoing)
+                    </p>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-surface-dark hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 transition-colors shadow-sm" href="#">
+<i class="fab fa-github text-lg"></i>
+<span>Open with GitHub</span>
+</a>
+</div>
+</div>
+</main>
+<script>
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        });
+    </script>
+
+</body></html>
